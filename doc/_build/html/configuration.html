@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Configuration &mdash; Owncloud 1.0 documentation</title>
+    
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="author" title="About these documents" href="about.html" />
+    <link rel="top" title="Owncloud 1.0 documentation" href="index.html" />
+    <link rel="next" title="Owncloud Directory Naming Convention" href="naming_convention.html" />
+    <link rel="prev" title="Installation" href="installation.html" />
+   
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9">
+
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="naming_convention.html" title="Owncloud Directory Naming Convention"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="installation.html" title="Installation"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">Owncloud 1.0 documentation</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>In order to attach documents or view listings, you first need to setup the Owncloud configuration properties from an Odoo Administrator account, then you need to setup the connection properties for a user in a specified Ownloud group. Both of these connection properties will be valid Owncloud login details.</p>
+<div class="section" id="attachments">
+<h2>Attachments<a class="headerlink" href="#attachments" title="Permalink to this headline">¶</a></h2>
+<p>In order to attach documents from Owncloud to Odoo, click on Dashboards-&gt;Owncloud tab (for Odoo version 8, click on Settings-Owncloud instead), and select &#8216;Configuration&#8217; and create a new entry.
+Create a new configuration properties record by entering a name for the connection properties and the appropriate  host, login and password values. Choose the &#8216;Attachments&#8217; flag for attachments.
+Test the connection properties by ticking the &#8216;Configure Owncloud Directory&#8217;, enter an Initial directory to read&#8217; as appropriate or leave as &#8216;/&#8217;, and press the &#8216;Test Connection&#8217; button.</p>
+<img alt="_images/attach.png" src="_images/attach.png" />
+</div>
+<div class="section" id="owncloud-directory">
+<h2>Owncloud Directory<a class="headerlink" href="#owncloud-directory" title="Permalink to this headline">¶</a></h2>
+<p>In order to view the contents of an owncloud directory, either create a second configuration record with the appropriate owncloud connection properties, and choose the &#8216;Directory Listings&#8217; flag.This is the default if no flag is selected
+Alternatively you may toggle the flag in the attachment configuration created above, and modify the &#8216; Initial directory to read&#8217; as appropriate.
+Test the connection properties by clicking the &#8216;Test Connection&#8217; button.</p>
+<img alt="_images/list.png" src="_images/list.png" />
+</div>
+<div class="section" id="user-preferences">
+<h2>User Preferences<a class="headerlink" href="#user-preferences" title="Permalink to this headline">¶</a></h2>
+<p>In order for a user to be able to use the Owncloud Connect application, the administrator will provide a valid Owncloud Login details, these details will be entered in the User Preferences; Click open the Preferences form and in the Owncloud Configuration section, enter the login details and choose the appropriate Listings/Attachments check box, and save the properties. You may test the connection by clicking the &#8216;Test Connection&#8217; button.</p>
+<img alt="_images/preferences.png" src="_images/preferences.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+<div class="line"><br /></div>
+</div>
+<img alt="_images/preference_form.png" src="_images/preference_form.png" />
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Notes:</p>
+<table class="docutils footnote" frame="void" id="id1" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[1]</td><td>In order for a user to be able to modify the Owncloud Configuration section of their preferences, the administrator may need to grant write access to res_users_all via Settings-&gt;Security-&gt;Access Control List.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id2" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[2]</td><td>The maximum number of Owncloud Configuration entries that can be defined by the administrator is 2; one for Directory Listings and one for Attachments.The Owncloud location and login details need not be the same.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id3" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[3]</td><td>The &#8216;Initial directory to read&#8217; on the configuration screen is used solely for testing owncloud connection by the administrator, and is not relevant to the group access granted to a particular user. This will be set in Owncloud.</td></tr>
+</tbody>
+</table>
+<table class="docutils footnote" frame="void" id="id4" rules="none">
+<colgroup><col class="label" /><col /></colgroup>
+<tbody valign="top">
+<tr><td class="label">[4]</td><td>If this application is installed in Odoo version 8, the admin configuration screen will be installed under the &#8216;Settings&#8217; menu tab and not &#8216;Dashboard&#8217;.</td></tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="index.html">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">Configuration</a><ul>
+<li><a class="reference internal" href="#attachments">Attachments</a></li>
+<li><a class="reference internal" href="#owncloud-directory">Owncloud Directory</a></li>
+<li><a class="reference internal" href="#user-preferences">User Preferences</a></li>
+</ul>
+</li>
+</ul>
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="installation.html" title="previous chapter">Installation</a></li>
+      <li>Next: <a href="naming_convention.html" title="next chapter">Owncloud Directory Naming Convention</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2015 Kuzmiq Software Ltd..
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.3</a>
+      
+    </div>
+
+    
+
+    
+  </body>
+</html>
