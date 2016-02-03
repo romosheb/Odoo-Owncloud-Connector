@@ -34,7 +34,9 @@ So the directory structure in Owncloud will be: <Sub-directory_Name>/<Repository
 
 Case sensitivity of the <Field_Name> must be respected.
 
-For example, for the Customer below, the Onwcloud directories will be: res_partner/11_Camptocamp/
+For example, for the Customer below, the Owncloud directories will be: res_partner/11_Camptocamp/.
+
+.. image:: more_menu.png
 
 If the Adminstrator is defining this, then access to the relevant group should be granted to <Sub-directory_Name>.
 
