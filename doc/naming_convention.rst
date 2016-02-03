@@ -9,7 +9,7 @@ The appropriate group access will be granted to this directory (no group access 
 
 .. image:: owncloud_dir.png
 
-The subdirectories will be named based on the record you are currently viewing. Each record has a unique Repository ID, which is visible on the form.
+The sub-directories will be named based on the record you are currently viewing. Each record has a unique Repository ID, which is visible on the form.
 
 The Owncloud-Connect application is currently configured to work for the following modules:
 
