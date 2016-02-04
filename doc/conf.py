@@ -47,7 +47,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Owncloud'
-copyright = u'2015 Kuzmiq Software Ltd.'
+copyright = u'2016 Kuzmiq Software Ltd.'
 author = u'Ray Omoshebi'
 
 # The version info for the project you're documenting, acts as replacement for

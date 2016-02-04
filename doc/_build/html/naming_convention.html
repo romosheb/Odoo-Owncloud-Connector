@@ -53,28 +53,57 @@
             
   <div class="section" id="owncloud-directory-naming-convention">
 <h1>Owncloud Directory Naming Convention<a class="headerlink" href="#owncloud-directory-naming-convention" title="Permalink to this headline">¶</a></h1>
-<p>The names of the directory in owncloud are named by the Odoo model responsible for the Odoo form. For instance, the model responsible for the Leads screen is crm.lead, therefore the directory will be name &#8216;crm_lead&#8217;, swapping the period for an underscore.
-The appropriate group access will be granted to this directory (no access is granted to any parent directory), and the &#8216;can share&#8217; and &#8216;can edit&#8217; checkboxes will be ticked.</p>
+<p>The directories in owncloud are named according to the Odoo model responsible for the Odoo form.</p>
+<p>For instance, the underlying model responsible for the Leads screen is crm.lead, therefore the directory name will be &#8216;crm_lead&#8217; (swapping the period for an underscore).</p>
+<p>The appropriate group access will be granted to this directory (no group access is granted to any parent(s) of this directory), and the &#8216;can share&#8217; checkbox will be ticked.</p>
 <img alt="_images/owncloud_dir.png" src="_images/owncloud_dir.png" />
-<p>The subdirectories will be named based on the record you are currently viewing. Each record has a unique Repository ID, which is visible on the form.
-The Owncloud-Connect application is currently configured to work from the following modules:</p>
-<blockquote>
-<div><ul class="simple">
-<li>Employees</li>
-<li>Sales</li>
-<li>Contacts</li>
-<li>Leads</li>
-<li>Opportunities</li>
-<li>Projects</li>
-</ul>
-</div></blockquote>
-<p>Kindly contact the developer, if configuration for other areas are requried.</p>
-<p>Once the Owncloud settings have been entered and verified in the user preferences, click on the &#8216;Action&#8217; pulldown of the appropriate form, and select &#8220;List Owncloud Dir...&#8221;.</p>
+<p>The sub-directories will be named based on the record you are currently viewing. Each record has a unique Repository ID, which is visible on the form.</p>
+<p>The Owncloud-Connect application is currently configured to work for the following modules:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="29%" />
+<col width="38%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Module</th>
+<th class="head">Sub-directory Name</th>
+<th class="head">Field Name</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first">Employees</p>
+<p>Customers</p>
+<p>Contacts</p>
+<p>Leads</p>
+<p>Opportunities</p>
+<p class="last">Projects</p>
+</td>
+<td><p class="first">hr_employee</p>
+<p>res_partner</p>
+<p>res_partner</p>
+<p>crm_lead</p>
+<p>cmr_lead</p>
+<p class="last">project_project</p>
+</td>
+<td><p class="first">Employee_Name</p>
+<p>Customer_Name</p>
+<p>Contact_Name</p>
+<p>Customer</p>
+<p>Customer</p>
+<p class="last">Project_Name</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>So the directory structure in Owncloud will be: &lt;Sub-directory_Name&gt;/&lt;RepositoryId&gt;_&lt;Field_Name&gt;/.</p>
+<p>Case sensitivity of the &lt;Field_Name&gt; must be respected.</p>
+<p>For example, for the Customer below, the Owncloud directories will be: res_partner/11_Camptocamp/.</p>
 <img alt="_images/more_menu.png" src="_images/more_menu.png" />
-<p>This will create a share link URL for the owncloud directory and display its content.</p>
-<img alt="_images/viewdir1.png" src="_images/viewdir1.png" />
-<p>You may drill down to any related sub-directories from the share link URL.
-You may also send the link to another person via e-mail etc.</p>
+<p>If the Adminstrator is defining this, then access to the relevant group should be granted to &lt;Sub-directory_Name&gt;.</p>
+<p>Avoid using forward slash (&#8216;/&#8217;) in Field_Name, etc for obvious reasons.</p>
+<p>Once the Owncloud settings have been entered and verified in the user preferences, click on the &#8216;Action&#8217; pulldown of the appropriate form, and select &#8220;List Owncloud Dir...&#8221;, or &#8220;Attach Owncloud Doc...&#8221; as appropriate.</p>
+<p>Kindly contact the developer, if configuration for other modules are requried.</p>
 </div>
 
 
@@ -109,7 +138,7 @@ You may also send the link to another person via e-mail etc.</p>
       <div class="clearer"></div>
     </div>
     <div class="footer">
-      &copy;2015 Kuzmiq Software Ltd..
+      &copy;2016 Kuzmiq Software Ltd..
       
       |
       Powered by <a href="http://sphinx-doc.org/">Sphinx 1.3.5</a>
